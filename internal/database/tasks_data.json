@@ -4,36 +4,50 @@
             "Id": 1,
             "Description": "pray",
             "Status": "todo",
-            "CreatedAt": "2025-08-30T20:05:29.063318898+03:00",
-            "UpdatedAt": "2025-08-30T20:05:29.063319108+03:00"
+            "CreatedAt": "2025-08-30 20:05:29",
+            "UpdatedAt": "2025-08-30 20:05:29"
         },
         {
             "Id": 2,
             "Description": "read quran",
             "Status": "todo",
-            "CreatedAt": "2025-08-30T20:07:47.724380898+03:00",
-            "UpdatedAt": "2025-08-30T20:07:47.724381082+03:00"
+            "CreatedAt": "2025-08-30 20:07:47",
+            "UpdatedAt": "2025-08-30 20:07:47"
         },
         {
             "Id": 3,
             "Description": "make dua",
             "Status": "todo",
-            "CreatedAt": "2025-08-30T20:09:27.927253035+03:00",
-            "UpdatedAt": "2025-08-30T20:09:27.927253159+03:00"
+            "CreatedAt": "2025-08-30 20:09:27",
+            "UpdatedAt": "2025-08-30 20:09:27"
         },
         {
             "Id": 4,
             "Description": "call mom",
-            "Status": "todo",
-            "CreatedAt": "2025-08-30T20:11:32.234293363+03:00",
-            "UpdatedAt": "2025-08-30T20:11:32.234293488+03:00"
+            "Status": "in-progress",
+            "CreatedAt": "2025-08-30 20:11:32",
+            "UpdatedAt": "2025-08-31 15:23:06"
         },
         {
             "Id": 5,
             "Description": "smile",
+            "Status": "done",
+            "CreatedAt": "2025-08-30 20:12:14",
+            "UpdatedAt": "2025-08-31 15:23:20"
+        },
+        {
+            "Id": 6,
+            "Description": "and give him water",
             "Status": "todo",
-            "CreatedAt": "2025-08-30T20:12:14.096519023+03:00",
-            "UpdatedAt": "2025-08-30T20:12:14.096519201+03:00"
+            "CreatedAt": "2025-08-31 12:21:55",
+            "UpdatedAt": "2025-08-31 14:59:51"
+        },
+        {
+            "Id": 7,
+            "Description": "check time",
+            "Status": "in-progress",
+            "CreatedAt": "2025-08-31 12:24:02",
+            "UpdatedAt": "2025-08-31 15:22:11"
         }
     ]
 }
