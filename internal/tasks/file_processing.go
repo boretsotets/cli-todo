@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func Load_from_file() (TaskList, error) {
+func LoadFromFile() (TaskList, error) {
 	all_data := TaskList{}
 	file, err := os.Open("./internal/database/tasks_data.json")
 	if err == nil || os.IsNotExist(err) {
@@ -20,7 +20,7 @@ func Load_from_file() (TaskList, error) {
 	return all_data, nil
 }
 
-func Write_to_file(filename string, all_data TaskList) {
+func WriteToFile(filename string, all_data TaskList) {
 	writeFile, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
 	if err != nil {
 		fmt.Println(err)

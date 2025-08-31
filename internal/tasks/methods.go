@@ -19,7 +19,7 @@ type Task struct {
 	UpdatedAt time.Time
 }
 
-func No_such_method(a string) {
+func NoSuchMethod(a string) {
 	response := 
 `No such method: %s
 Please, enter one of available methods:
@@ -31,8 +31,8 @@ Please, enter one of available methods:
 	fmt.Printf(response, a)
 }
 
-func Add_method(a []string) {
-	all_data, _ := Load_from_file()
+func AddMethod(a []string) {
+	all_data, _ := LoadFromFile()
 	if len(a) < 2 {
 		fmt.Println("Write description!")
 		return
@@ -44,13 +44,13 @@ func Add_method(a []string) {
 	task := Task{len(all_data.Tasks)+1, a[1], "todo", time.Now(), time.Now()}
 	all_data.Tasks = append(all_data.Tasks, task)
 
-	Write_to_file("./internal/database/tasks_data.json", all_data)
+	WriteToFile("./internal/database/tasks_data.json", all_data)
 
 	return
 }
 
-func Delete_method(a []string) {
-	all_data, _ := Load_from_file()
+func DeleteMethod(a []string) {
+	all_data, _ := LoadFromFile()
 
 	index, err := strconv.Atoi(a[1])
 	if err != nil {
@@ -67,12 +67,12 @@ func Delete_method(a []string) {
 		}
 	}
 
-	Write_to_file("./internal/database/tasks_data.json", all_data)
+	WriteToFile("./internal/database/tasks_data.json", all_data)
 	
 }
 
-func Update_method(a []string) {
-	all_data, _ := Load_from_file()
+func UpdateMethod(a []string) {
+	all_data, _ := LoadFromFile()
 
 	if len(a) != 2 {
 		fmt.Println("Write task id and new descrition in brackets!")
@@ -94,8 +94,10 @@ func Update_method(a []string) {
 		}
 	}
 
-	Write_to_file("./internal/database/tasks_data.json", all_data)
+	WriteToFile("./internal/database/tasks_data.json", all_data)
 }
 
-
+func ListMethod() {
+	
+}
 
