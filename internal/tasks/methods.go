@@ -5,6 +5,7 @@ import (
 	"slices" // Requires Go 1.21+
 	"strconv"
 	"fmt"
+	"sort"
 )
 
 type TaskList struct {
@@ -43,7 +44,25 @@ func AddMethod(a []string) {
 
 	formattedTime := time.Now().Format("2006-01-02 15:04:05")
 
-	task := Task{len(all_data.Tasks)+1, a[1], "todo", formattedTime, formattedTime}
+	var ids []int
+	var id int
+	for i := range all_data.Tasks {
+		ids = append(ids, all_data.Tasks[i].Id)
+	}
+	sort.Ints(ids)
+	
+	for i := range ids {
+		if i+1 != ids[i] {
+			id = i+1
+			break
+		}
+	}
+
+	if id == 0 {
+		id = len(ids)+1
+	}
+
+	task := Task{id, a[1], "todo", formattedTime, formattedTime}
 	all_data.Tasks = append(all_data.Tasks, task)
 
 	WriteToFile("./internal/database/tasks_data.json", all_data)
@@ -66,6 +85,7 @@ func DeleteMethod(a []string) {
 			break
 		} else if i == len(all_data.Tasks)-1 {
 			fmt.Println("There is no task with this id!")
+			return
 		}
 	}
 
@@ -94,6 +114,7 @@ func UpdateMethod(a []string) {
 			break
 		} else if i == len(all_data.Tasks)-1 {
 			fmt.Println("There is no task with this id!")
+			return
 		}
 	}
 
